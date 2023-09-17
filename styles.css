@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.65rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;    
+  background-color: #201f20;
+}
+
+.container {
+  width: 100%;
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin: 2rem 0;
+  color:antiquewhite;
+}
+
+
+.carousel {
+  width: 90%;   
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel__inner {
+  width: 400%;
+  display: flex;
+}
+
+
+.card {
+  width: 25%;
+  padding: 0 3.2rem 3.2rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: .6s;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 0 1.5rem 0;
+  align-self: center;
+  opacity: 0;
+  transform:matrix(0, 1, 1, 2, 8, 8);
+  transition: .5s;
+  border-radius: 2rem;
+}
+
+.card__text {
+  font-size: 1.31rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  line-height: 1.5;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(40px, -20px, -35px);;
+  transition: .3s;
+  transition-delay: .2s;
+}
+
+
+input[name="radio-btn"]  {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.carousel__nav {
+  display: flex;
+  align-self: flex-end;
+  transform: translate(-3.2rem, -8.6rem);
+}
+
+.carousel__navlink {
+  width: 5rem;
+  height: 4rem;
+  border-radius: 100%;
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__navlink > * {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  transition: .3s;
+  background-color: #c7c4c4cd;
+  border: 0.2rem solid #FFFFFF;
+}
+
+.carousel__navlink:hover > * {
+  background-color: #471f30;
+  border-color: #c5b781;
+}
+
+/** SLIDES **/
+
+
+#radio-btn1:checked ~ .carousel__inner .card1 {
+  margin-left: 0;
+}
+
+#radio-btn2:checked ~ .carousel__inner .card1 {
+  margin-left: -25%;
+}
+
+#radio-btn3:checked ~ .carousel__inner .card1 {
+  margin-left: -50%;
+}
+
+#radio-btn4:checked ~ .carousel__inner .card1 {
+  margin-left: -75%;
+}
+
+/** Switchers **/
+
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"] > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"] > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"] > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"] > * {
+  border-color: #FFFFFF;
+  background: transparent;
+}
+
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:hover > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:hover > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:hover > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:hover > * {
+  border-color: #71260d;
+  background: transparent;
+}
+
+#radio-btn1:checked ~ .carousel__nav label[for="radio-btn1"]:active > *,
+#radio-btn2:checked ~ .carousel__nav label[for="radio-btn2"]:active > *,
+#radio-btn3:checked ~ .carousel__nav label[for="radio-btn3"]:active > *,
+#radio-btn4:checked ~ .carousel__nav label[for="radio-btn4"]:active > * {
+  border-color: #ff004c;
+  background: transparent;
+  box-shadow: 0 0 1rem #fb1f1f;
+}
+
+.carousel__nav label[for="radio-btn1"]:active > *,
+.carousel__nav label[for="radio-btn2"]:active > *,
+.carousel__nav label[for="radio-btn3"]:active > *,
+.carousel__nav label[for="radio-btn4"]:active > * {
+  border-color: #ff3636;
+  background-color: #b81010;
+  box-shadow: 0 0 1rem #770c0c;
+}
+
+
+
+/** Memes Function **/
+
+#radio-btn1:checked ~ .carousel__inner .card1 .card__image {
+  opacity: 1;
+  transform:scale(1);
+}
+
+#radio-btn2:checked ~ .carousel__inner .card2 .card__image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#radio-btn3:checked ~ .carousel__inner .card3 .card__image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#radio-btn4:checked ~ .carousel__inner .card4 .card__image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/*** TEXT ***/
+
+#radio-btn1:checked ~ .carousel__inner .card1 .card__text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#radio-btn2:checked ~ .carousel__inner .card2 .card__text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#radio-btn3:checked ~ .carousel__inner .card3 .card__text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#radio-btn4:checked ~ .carousel__inner .card4 .card__text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media (max-width: 767px) {
+
+  .card {
+      padding: 0 1.6rem 1.6rem 1.6rem;
+  }
+
+  .card__image {
+      width: 100%;
+      margin: 0 0 7.5rem 0;
+  }
+
+  .card__text {
+      width: 100%;
+      transform: translateX(0);
+      transform: translateY(100%);
+  }
+
+  .carousel__nav {
+      align-self: center;
+      transform: translate(0);
+      transform: translateY(-530%);
+  }
+  
+  .carousel__navlink {
+      width: 3.5rem;
+      height: 2.5rem;
+  }
+
+  .carousel__navlink > * {
+      width: 1.5rem;
+      height: 1.5rem;
+  }
+}
+
+@media (max-width: 462px) {
+
+  .title {
+      font-size: 2.8rem;
+      margin: 1.6rem 0;
+  }
+  .carousel__nav {
+      transform: translateY(-630%);
+  }
+}
