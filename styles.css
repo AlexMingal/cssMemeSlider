@@ -55,7 +55,7 @@ html {
 }
 
 .card__image {
-  width: 100%;
+  width: 95%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   margin: 0 0 1.5rem 0;
@@ -86,6 +86,7 @@ input[name="radio-btn"]  {
 }
 
 .carousel__nav {
+  margin-top: 1.5rem;
   display: flex;
   align-self: flex-end;
   transform: translate(-3.2rem, -8.6rem);
@@ -117,7 +118,6 @@ input[name="radio-btn"]  {
 }
 
 /** SLIDES **/
-
 
 #radio-btn1:checked ~ .carousel__inner .card1 {
   margin-left: 0;
@@ -170,7 +170,6 @@ input[name="radio-btn"]  {
   background-color: #b81010;
   box-shadow: 0 0 1rem #770c0c;
 }
-
 
 
 /** Memes Function **/
@@ -256,7 +255,7 @@ input[name="radio-btn"]  {
 @media (max-width: 462px) {
 
   .title {
-      font-size: 2.8rem;
+      font-size: 2rem;
       margin: 1.6rem 0;
   }
   .carousel__nav {
