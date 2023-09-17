@@ -8,27 +8,55 @@
   <title>CssMemeSlider by AlexMingal</title>
 </head>
 <body>
-  <div class="slider">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
+  <div class="container">
+    <div class="carousel">
+
+        <input type="radio" name="radio-btn" id="radio-btn1" checked>
+        <input type="radio" name="radio-btn" id="radio-btn2">
+        <input type="radio" name="radio-btn" id="radio-btn3">
+        <input type="radio" name="radio-btn" id="radio-btn4">
     
-    <div class="slides">
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-    </div>
-  
-    <div class="navigation">
-      <label for="slide1"></label>
-      <label for="slide2"></label>
-      <label for="slide3"></label>
-      <label for="slide3"></label>
+        <div class="carousel__inner">
+          <div class="card card1">
+              <img class="card__image" src="./pics/slide1.jpg" alt="Meme1">
+              <p class="card__text">
+                  Почему стоит встречаться с програмистом,<br>
+                  который понимает в управлении памятью...<br>
+              </p>
+          </div>
+          <div class="card card2">
+              <img class="card__image" src="./pics/slide2.png" alt="Meme2">
+              <p class="card__text">
+                  Когда ты написал 10 строк кода без помощи Гугла.<br>
+                  Да, совсем немного, зато честная работа.<br>
+              </p>
+          </div>
+          <div class="card card3">
+              <img class="card__image" src="./pics/slide3.jpg" alt="Meme3" >
+              <p class="card__text">
+                  Когда ты студент-программист, <br>
+                  но не понял мема про прграммистов. <br>
+                  
+              </p>
+          </div>
+          <div class="card card4">
+              <img class="card__image" src="./pics/slide4.jpg" alt="Meme4">
+              <p class="card__text">
+                  Девушка сказала, что хочет посмотреть <br>
+                  "Какой у меня Питон". А я знаю только Javascript.<br>
+              </p>
+          </div>
+      </div>
+
+      
+      <div class="carousel__nav">
+        <label for="radio-btn1" class="carousel__navlink"><span></span></label>
+        <label for="radio-btn2" class="carousel__navlink"><span></span></label>
+        <label for="radio-btn3" class="carousel__navlink"><span></span></label>
+        <label for="radio-btn4" class="carousel__navlink"><span></span></label>
     </div>
   </div>
-
+</div>
 
 </body>
 </html>
