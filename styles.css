@@ -63,7 +63,7 @@ html {
   opacity: 0;
   transform:matrix(0, 1, 1, 2, 8, 8);
   transition: .5s;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .card__text {
@@ -76,6 +76,7 @@ html {
   transform: translate3d(40px, -20px, -35px);;
   transition: .3s;
   transition-delay: .2s;
+  color: #edebe0;
 }
 
 
